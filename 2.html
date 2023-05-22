@@ -1,0 +1,40 @@
+<table border="1">
+    <tr>
+        <td>grid</td>
+        <td>name</td>
+        <td>phone</td>
+
+    </tr>
+    <tbody id="record"></tbody>
+</table>
+<script type="text/javascript">
+    let tbl = "";
+
+    class demo {
+        constructor(grid, name, phone) {
+            this.grid = grid;
+            this.name = name;
+            this.phone = phone;
+        }
+        details = () => {
+
+            tbl += `
+        <tr>
+            <td>${this.grid}</td>
+            <td>${this.name}</td>
+            <td>${this.phone}</td>
+            </tr>
+        `
+            document.getElementById('record').innerHTML = tbl;
+        }
+
+    }
+
+    let obj1 = new demo("jay", "jay@gmail.com", "12345",);
+    obj1.details();
+    let obj2 = new demo("ajay", "ajay@gmail.com", "12345",);
+    obj2.details();
+    let obj3 = new demo("vijay", "vijay@gmail.com", "12345",);
+    obj3.details();
+   
+</script>
